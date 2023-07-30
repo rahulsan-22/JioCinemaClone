@@ -1,0 +1,505 @@
+:root {
+  --base-font-family: "Roboto", sans-serif;
+  --base-font-weight: 400;
+  --base-font-color: rgba(0, 0, 0, 0.87);
+  --base-font-size: 1rem;
+  --base-background-color: rgb(255, 255, 255);
+  --base-navbar-bg-color: #0d0e10;
+  --base-navbar-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--base-font-family);
+  color: var(--base-font-color);
+  font-size: var(--base-font-size);
+  font-weight: var(--base-font-weight);
+  background-color: var(--base-background-color);
+}
+
+#_jio_cinema_header {
+  background-color: var(--base-navbar-bg-color);
+  box-shadow: var(--base-navbar-box-shadow);
+  color: var(--base-background-color);
+  height: 80px;
+  width: 100%;
+}
+
+#_jio_cinema_header > article {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.leftBlock {
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.rightBlock {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.leftBlock nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.leftBlock nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 14px;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.logoBlock {
+  flex-basis: 20%;
+}
+
+.leftMenuBlock {
+  flex-basis: 80%;
+}
+
+.logoBlock a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.subscribe {
+  cursor: pointer;
+  padding: 4px 14px !important;
+  border: 2px solid rgb(193, 163, 98);
+  border-radius: 34px;
+  color: rgb(193, 163, 98) !important;
+  font-size: 13px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.for_you {
+  border: 1px solid #fff;
+  border-radius: 30px;
+  margin: 10px 8px;
+}
+
+.userBlock img {
+  height: 40px;
+  width: 40px;
+}
+
+.searchBlock {
+  position: relative;
+}
+
+.searchBlock input {
+  padding: 13px 23px;
+  border-radius: 30px;
+  background: transparent;
+  border: 1px solid #888;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.searchBlock span:nth-child(2) {
+  position: absolute;
+  right: 24px;
+  top: 12px;
+}
+
+.sidebar_nav {
+  background-color: #111;
+  position: absolute;
+  top: 62px;
+  right: -76px;
+  width: 350px;
+  height: 100vh;
+}
+
+.sidebar_nav .container {
+  padding: 20px 30px;
+}
+
+.sidebar_nav .login_block {
+  display: flex;
+  padding: 10px 0 20px;
+  align-items: center;
+}
+
+.sidebar_nav .login_block figure {
+  flex-basis: 10%;
+}
+
+.sidebar_nav .login_block .guest {
+  flex-basis: 80%;
+  padding: 0 20px;
+}
+
+.sidebar_nav .login_block .arrow {
+  flex-basis: 10%;
+}
+
+.MuiSvgIcon-root {
+  user-select: none;
+  display: inline-block;
+  fill: currentcolor;
+  flex-shrink: 0;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+  width: 0.6em;
+  height: 0.7em;
+  color: rgb(255, 255, 255);
+}
+
+.sidebar_nav a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1.1px;
+  font-weight: bold;
+}
+
+.sidebar_nav .guest p:last-child a {
+  color: #999;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.sidebar_nav main:nth-child(1) main {
+  padding: 20px 0px;
+  border-bottom: 1px solid #555;
+}
+
+.sidebar_nav main:nth-child(1) footer {
+  padding: 20px 0px;
+}
+
+.userBlock label {
+  /* display: none; */
+  position: absolute;
+  top: 0px;
+  right: -350px;
+  transform: translate(0px 0px);
+  transition: ease all 0.5s;
+  overflow: hidden;
+  z-index: 100
+}
+
+.userBlock input[type="checkbox"]:checked + label {
+  /* visibility: visible;
+    display: block !important; */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  overflow: visible;
+  z-index: 100;
+}
+
+.userBlock {
+  position: relative;
+}
+
+.userBlock input[type="checkbox"] {
+  position: absolute;
+  top: -31px;
+  right: 0px;
+  height: 102px;
+  display: block;
+  width: 40px;
+  background: transparent;
+  opacity: 0;
+}
+
+/* JIO CINEMA SLIDER STARTS HERE */
+
+#_jio_cinema_slider {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(13,14,16);
+  color: #fff;
+}
+
+
+#_jio_cinema_slider picture img {
+  position: absolute;
+  right: 0;
+  width: 60%;
+  max-height: 650px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+#_jio_cinema_slider .container1 footer{
+    position: absolute;
+    margin: 27px 30px;
+    z-index: 1;
+    color: #fff;
+    bottom: 10%;
+}
+
+#_jio_cinema_slider .container1 footer h2{
+
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 1.1px;
+    padding-bottom: 14px;
+}
+
+#_jio_cinema_slider .container1 footer p{
+  padding: 20px 0px;
+  color: #999;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+#_jio_cinema_slider .container1 footer button{
+  background-color: #d9008d;
+  padding: 13px 19px;
+  border:none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#_jio_cinema_slider .container1 footer button i{
+  padding: 0px 6px;
+}
+
+#_jio_cinema_slider .container1 footer button:hover{
+  background-color: rgb(158, 18, 111);
+  transition: ease all 0.6s;
+}
+
+
+
+
+
+
+
+
+
+
+#_jio_cinema_slider .container1 aside{
+  display: flex;
+  height: 372px;
+  width: 661px;
+}
+
+#_jio_cinema_slider picture .gradient{
+  position: absolute;
+  width: 60%;
+  height: 520px;
+  right: 0;
+  top: 80px;
+  z-index: 1;
+  background:linear-gradient(180deg, #0D0E10 3%, rgba(13, 14, 16, 0) 18.6%),linear-gradient(180.13deg, rgba(13, 14, 16, 0) 62.57%, #0D0E10 88.89%);
+  box-shadow: 0px 0px 1000px inset #111;
+}
+
+
+
+
+
+/* JIO CINEMA SLIDER ENDS HERE */
+
+
+  /* <!-- JIO CINEMA JUSTFORYOU BLOCK STARTS HERE  --> */
+
+#_just_for_you{
+  background-color:rgb(13,14,16);
+  color: #fff;
+  padding: 10px 30px;
+
+}
+
+
+#_just_for_you header h2{
+  font-size: 20px;
+  padding: 20px 0px;
+  font-weight: bold;
+  
+}
+
+#_just_for_you main{
+  display: flex;
+  gap: 10px;
+}
+
+#_just_for_you main aside{
+  flex: 1;
+  border-radius: 5px;
+}
+
+#_just_for_you main aside img{
+  width: 100%;
+  border-radius: 5px;
+}
+
+ /* <!-- JIO CINEMA JUSTFORYOU BLOCK ENDS HERE  --> */
+
+ /* JIO CINEMA POPULAR BLOCK STARTS HERE */
+
+ #popular{
+  background-color:rgb(13,14,16);
+  color: #fff;
+  padding: 10px 30px;
+
+}
+#popular .container1 header h2{
+
+    font-size: 20px;
+    padding: 20px 0px;
+    font-weight: bold;
+    
+}
+#popular .container1 main{
+  display: flex;
+  gap: 10px;
+  width: 90%;
+}
+
+#popular .container1 main aside{
+  flex: 1;
+  border-radius: 5px;
+}
+
+#popular .container1 main aside img{
+  border: none;
+  background-color: rgb(23,24,26);
+  width: 100%;
+  border-radius: 5px;
+}
+
+#popular .container1 main aside img:hover{
+  background-color:#333
+}
+
+ /* JIO CINEMA POPULAR BLOCK ENDS HERE */
+
+ .foot_part{
+  color: white;
+ padding-bottom: 20px;
+  height: 100%;
+  width: 100%;
+  background-color: #17191B;
+}
+
+.foot_part .container{
+  display: flex;
+  padding-left: 20px;
+  padding-top: 50px;
+}
+
+.foot_part .container .leftsideS{
+  flex: 1;
+  padding-left: 60px;
+}
+
+.foot_part .container .leftsideF li,.leftsideS li{
+  list-style-type: none;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #696969;
+}
+
+.foot_part .container .leftsideF h3,.leftsideS h3{
+  font-size: 16px;
+  padding-left: 8px;
+  padding-bottom: 15px;
+}
+
+.foot_part .container .rightsideF{
+ padding-right: 50px;
+}
+
+.foot_part .container .rightsideF h2{
+  padding-bottom: 15px;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+}
+
+.foot_part .container .rightsideF main{
+  display: flex;
+  gap: 10px;
+}
+
+.foot_part .container .rightsideF main img{
+  padding: 16px;
+  /* border: 1px solid; */
+  border-radius: 50%;
+  background-color: #303030;
+}
+
+.foot_part .container .rightsideS h2{
+  padding-bottom: 15px;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+}
+
+.foot_part .container .rightsideS main{
+display: flex;
+gap: 10px;
+}
+
+.foot_part .container .rightsideS img{
+  width: 40%;
+}
+
+#_last{
+  height: 75px;
+  background-color: rgb(32,33,35);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top:1px solid rgb(39,40,42);
+}
+#_last article{
+  width: 98%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+footer .right p{
+  /* margin: 0; */
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+
+
+
+
+
